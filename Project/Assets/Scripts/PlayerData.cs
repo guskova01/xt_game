@@ -8,14 +8,20 @@ public class PlayerData : MonoBehaviour
 
     public bool isAlive = true;
 
-    public void TakeDamage(float damage )
+    public void TakeDamage(float damage)
     {
         _health -= damage;
         if (_health < 0)
         {
             isAlive = false;
-            Debug.Log("player is dead");
+
+           // Debug.Log("player is dead");
+            //Destroy(gameObject);
         }
 
+    }
+    public void AddHealth()
+    {
+        _health += Random.Range(25, 75);
     }
 }

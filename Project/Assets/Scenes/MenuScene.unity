@@ -170,7 +170,8 @@ MonoBehaviour:
   m_SendPointerHoverToParent: 1
   MaxDistance: 5
   PressButton: 0
-  UICanvases: []
+  UICanvases:
+  - {fileID: 756883271}
   AngleDragThreshold: 1
 --- !u!114 &15852170
 MonoBehaviour:
@@ -638,7 +639,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -49.1, y: 0.3}
+  m_AnchoredPosition: {x: -49.1, y: -19.2}
   m_SizeDelta: {x: 80, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &773991573
@@ -684,7 +685,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 773991574}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 15852168}
+        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
+        m_MethodName: StartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &773991574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -911,7 +924,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: eaf0f257d6afe7142945bb520e086aaf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -993,7 +1006,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 46.8, y: -0.9}
+  m_AnchoredPosition: {x: 46.8, y: -19.4}
   m_SizeDelta: {x: 80, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1332615456
@@ -1039,7 +1052,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1332615457}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 15852168}
+        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
+        m_MethodName: ExitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1332615457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1250,6 +1275,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1945287056}
   - component: {fileID: 1945287055}
+  - component: {fileID: 1945287057}
   m_Layer: 0
   m_Name: SceneContext
   m_TagString: Untagged
@@ -1270,7 +1296,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scriptableObjectInstallers: []
-  _monoInstallers: []
+  _monoInstallers:
+  - {fileID: 1945287057}
   _installerPrefabs: []
   _autoRun: 1
   OnPreInstall:
@@ -1303,3 +1330,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1945287057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945287054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04326f6c9e6c18446986b188328302b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startPosition: {fileID: 0}
+  pistolPrefab: {fileID: 0}
+  start: {fileID: 2490866121939885365, guid: 59f7f755800f69747b8b4195ef9d456d, type: 3}
+  playerPrefab: {fileID: 1125561785207164694, guid: bd9c1d12c9854a948a903249a6b0e797, type: 3}
